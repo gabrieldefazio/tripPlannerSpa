@@ -7,13 +7,13 @@ const { Restaurant } = require('../models');
 const { Place } = require('../models');
 
 
-Router.use('/', (req, res, next) =>{
+Router.get('/', (req, res, next) =>{
     const hotelPromise = Hotel.findAll({ include: [{ all: true }] });
     const activityPromise = Activity.findAll({ include: [{ all: true }] });
     const restaurantPromise = Restaurant.findAll({ include: [{ all: true }] });
     Promise.all([hotelPromise, activityPromise, restaurantPromise])
-        .then((fulfulledProms) =>{
-        res.json(fulfulledProms);
+        .then((fulfilledProms) =>{
+        res.json(fulfilledProms);
         })
 });
 
