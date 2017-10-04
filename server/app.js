@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 nunjucks.configure('views', { noCache: true});
 app.engine('html', nunjucks.render);
 app.set('view engine', 'html');
+app.use('/', require('../routes/api'));
 
 
 
