@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start:dev": "webpack -w & nodemon server/app.js",
+    "start:dev": "webpack -w & node server/app.js",
     "start": "npm run start:dev"
   },
   "license": "MIT",
