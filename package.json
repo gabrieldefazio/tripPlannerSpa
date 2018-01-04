@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start:dev": "webpack -w & node server/app.js",
-    "start": "node server/seed.js"
+    "start": "npm run start:dev"
   },
   "license": "MIT",
   "dependencies": {
