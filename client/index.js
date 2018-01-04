@@ -1,7 +1,6 @@
 const mapboxgl = require("mapbox-gl");
 const buildMarker = require("./marker");
 const attractions = require("./attractions");
-const mapBoxKey = req
 
 /*
  * App State
@@ -16,8 +15,8 @@ const state = {
 /*
   * Instantiate the Map
   */
-
-mapboxgl.accessToken = process.env.MAPBOX_KEY || ;
+// This is where you will enter your own personal mapBoxKey for dev purposes. To deploy, create an enviromental variable in your config!
+mapboxgl.accessToken = process.env.MAPBOX_KEY;
 const map = new mapboxgl.Map({
   container: "map-canvas",
   center: [-74.0, 40.731],
